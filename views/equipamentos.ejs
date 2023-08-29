@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Lista de Equipamentos</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body id="background" class="bg-black">
+    <div id="lista-equipamentos">
+        <h1>LISTA DE EQUIPAMENTOS</h1>
+        <ul>
+            <% equipamentos.forEach(equipamento => { %>
+                <li class="text-lg text-black "><%= equipamento.nome %></li>
+            <% }); %>
+        </ul>
+        <form action="/equipamentos" method="POST">
+            <input type="text" name="title" placeholder="Novo equipamento">
+            <button class="botaoSubmitEqui" type="submit">Adicionar</button>
+        </form>
+    </div>
+</body>
+
+</html>
+

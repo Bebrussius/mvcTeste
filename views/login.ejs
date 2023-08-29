@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Cadastro de equipamentos</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+  <body class="login">
+    <h1>Login</h1>
+    <form action="/login" method="POST" class="">
+      <input class="input" name="username" type="text" /><br />
+      <input class="input" name="password" type="password" /><br />
+      <input class="botaoSubmit" type="submit" value="Login" />
+    </form>
+    <% if(message) { %>
+      <p>
+        <label style="color:Red"><%= message %></label>
+      </p>
+    <%}%>
+    <p>
+      <a href="/users/forgot">Esqueceu sua senha?</a> | <a href="/users/signup">Não possui cadastro?</a>
+    </p>
+  </body>
+</html>
